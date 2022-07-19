@@ -53,6 +53,7 @@ ecm.time(n, factor_digits, verbose=False)
 **公式ドキュメントによれば拡大体では扱えない(extend オプション付けなくてもできたけど...謎)**
 
 　=> all=Trueにすると回避できる　（意味わからん...）
+2べきは出来ないのでHensel's liftで対応できる
 
 options:
 
