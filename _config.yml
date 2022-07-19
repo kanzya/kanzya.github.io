@@ -16,36 +16,36 @@ lang: en
 prefer_datetime_locale:
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone:
+timezone: Asia/Tokyo
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy                          # the main title
+title: kanon                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: just a person   # it will display as the sub-title
 
-description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+# description: >-                        # used by seo meta and the atom feed
+#   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://kanzya.github.io'
 
 github:
-  username: github_username             # change to your github username
+  username: kanzya             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: ringbell_un            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@doamin.com             # change to your email address
+  name: kanzya
+  email: pahc1h8a@s.okayama-u.ac.jp             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://twitter.com/ringbell_un      # change to your twitter homepage
+    - https://github.com/kanzya       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -56,7 +56,7 @@ google_site_verification:               # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id:                 # fill in your Google Analytics ID
+  id: G-PPZFY5DSE3                 # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -73,17 +73,18 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode:   # [light|dark]
+theme_mode:   dark
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+
+img_cdn: 'https://raw.githubusercontent.com/kanzya/photo/main/image.jpg'
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: 'https://raw.githubusercontent.com/kanzya/photo/main/image.jpg'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
@@ -114,9 +115,6 @@ assets:
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
     env:          # [development|production]
-
-pwa:
-  enabled: true   # the option for PWA feature
 
 paginate: 10
 
@@ -185,7 +183,6 @@ exclude:
   - '*.gemspec'
   - tools
   - README.md
-  - CHANGELOG.md
   - LICENSE
   - gulpfile.js
   - node_modules
