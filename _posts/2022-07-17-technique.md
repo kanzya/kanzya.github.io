@@ -48,7 +48,7 @@ ecm.time(n, factor_digits, verbose=False)
 
 どれも素体でも整数上でも使える
 
-##### .nth_roots
+##### \.nth_roots
 
 **公式ドキュメントによれば拡大体では扱えない(extend オプション付けなくてもできたけど...謎)**
 
