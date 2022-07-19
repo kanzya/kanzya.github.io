@@ -90,9 +90,9 @@ K(231473674144484896672).nth_root(2, all=True)
 
 ```
 
-##### .sqrt
+##### sqrt
 
-使い方は[nth_root](#.nth_roots)と同じ
+使い方は[nth_root](#####nth_roots)と同じ
 
 
 ```python
