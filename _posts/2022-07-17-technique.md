@@ -1,7 +1,7 @@
 ---
 title: 2022-07-18-usefull sage functions
 author: kanon
-date: 2022-07-18 00:00:00 + 0000
+date: 2100-07-18 00:00:00 + 0000
 categories: [ctf,writeup]
 tags: [ctf,cryptography,writeup]
 math: true
