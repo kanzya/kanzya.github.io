@@ -18,7 +18,6 @@ mermaid: true
 cryptoctfが重すぎた...
 
 てか、そろそろfirst bloodをとりたいすね...
-![Desktop View](/assets/img/ctf/TFCCTF/1.png)
 
 
 
