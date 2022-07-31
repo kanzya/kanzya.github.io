@@ -17,12 +17,13 @@ mermaid: true
 息抜きに...
 cryptoctfが重すぎた...
 
+てか、そろそろfirst bloodをとりたいすね...
 ![Desktop View](/assets/img/ctf/TFCCTF/1.png)
-てか、そろそろfirst blood とりたいすね...
 
 
 
-## EXCLUSIVE_ORACLE
+
+## EXCLUSIVE_ORACLE [75 solve]
 
 繋いで適当な値を入れまくってみると、返り値が80文字以上増えなくなる。
 よって、flagは半分の40文字と推測でき、入力値が40文字で、flagが40文字で共通鍵暗号的に何ができるかというとxorかなぁと...
@@ -49,7 +50,7 @@ print(long_to_bytes(bytes_to_long(ret[40:])^key))
 ```
 
 
-## TRAIN_TO_PADDINGTON
+## TRAIN_TO_PADDINGTON [132 solves]
 
 ### chall
 
@@ -82,7 +83,7 @@ with open('output.txt', 'w') as f:
 
 ### solve
 
-まあ普通のxorの問題で、先頭と後ろでそれぞれ TFCCTF{ と\x3f*16 でxor取って出てきた値が被っていれば簡単に復元できるからかぶれがいいなぁとか思っていたら普通に被ってたので簡単にkeyが手に入った。このkeyを使って復元しておしまい!
+まあ普通のxorの問題で、先頭と後ろでそれぞれ TFCCTF{ と\x3f*16 でxor取って出てきた値が被っていれば簡単に復元できるから被りがいいなぁとか思っていたら普通に被ってたので簡単にkeyが手に入った。このkeyを使って復元しておしまい!
 
 ```python
 from Crypto.Util.number import *
@@ -180,7 +181,7 @@ if __name__ == "__main__":
 
 ### solve
 
-初手適当に2*64代入したら初めのバイト以外全てのバイト列が同じものが出てきた...
+初手適当に手元で2*64代入したら初めのバイト以外全てのバイト列が同じものが出てきた...
 何も考えずにAccess Flagで初めの値のブルートフォースで終わり。
 
 
@@ -214,7 +215,7 @@ for i in tqdm(range(256)):
 # TFCCTF{l0g0n_z3r0_w1th_3xtr4_st3ps!}
 ```
 
-## ADMIN PANEL BUT HARDER
+## ADMIN PANEL BUT HARDER　[78 solves]
 
 ### chall
 
@@ -340,7 +341,7 @@ for i in tqdm(range(256)):
 ```
 
 
-## ADMIN PANEL BUT HARDER FIXED
+## ADMIN PANEL BUT HARDER FIXED　[50 solves ・56 solves]
 
 ### chall
 
