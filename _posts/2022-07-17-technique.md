@@ -118,3 +118,17 @@ find_root(f, 0,4) #2.999999999999995
 find_root(f, 0,1) #0.124999
 find_root(f, -20,-10) #-17.0
 ```
+
+
+
+#### 有限体上での roots
+
+多項式の範囲
+
+```python
+P.<X> = PolynomialRing(GF(p))
+# results = 110 *X + 313*X^(-1) + 114*X^(-2)-c -> 機能しないので肩は性の値にするべき
+results = 110 *X^3 + 313*X + 114*X-c*X^(2)
+print(results.roots())
+```
+
