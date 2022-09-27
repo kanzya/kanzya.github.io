@@ -141,6 +141,7 @@ Manger さんが2001年に出した[論文](https://www.iacr.org/archive/crypto2
 ### STEP1 
 解の範囲を大まかに絞る。(2分探索)
 ![STEP1](https://github.com/kanzya/photo/raw/main/1.png)
+2枚目
 
 ![STEP1-1](https://github.com/kanzya/photo/raw/main/1-1.png)
 
