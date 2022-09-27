@@ -1,7 +1,7 @@
 ---
 title: manger attackについて
 author: kanzya
-date: 2022-05-23 11:33:00 +0800
+date: 2022-09-27 14:30:00 +0800
 categories: [ctf]
 tags: [ctf,cryptography]
 math: true
