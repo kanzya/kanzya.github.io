@@ -1,6 +1,6 @@
 ---
 title: cyberapocarypse writeup
-author: kanzya
+author: kanon
 date: 2022-05-23 11:33:00 +0800
 categories: [ctf,writeup]
 tags: [ctf,cryptography,writeup]
