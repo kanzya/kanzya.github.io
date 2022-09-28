@@ -149,7 +149,6 @@ Manger さんが2001年に出した[論文](https://www.iacr.org/archive/crypto2
 mの存在範囲を $[iN,iN+2B)$ に移動・拡大or縮小する。
 ![STEP2](https://github.com/kanzya/photo/raw/main/2.png)
 
-
 ### STEP3
 oracleで判定し二分探索する。
 二分探索後は範囲の場所である $[iN,iN+2B)$ を満たさない。よって3.3で求める$f_{tmp}$で最小値と最大値の差を$2B$にするように範囲の縮尺を拡大する。次に、$f_3$において平行移動を行い最小値を $iN$ のところまでにする。
