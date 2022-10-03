@@ -31,7 +31,7 @@ SEKAICTFが10/1-10/3までの計48時間で開催されました。\\
 
 内容はコンソール版のKeep Talking and Nobody Explodesで、これ作るの大変じゃない???と思いつつ仕様書とにらめっこして解きました。\\
 ![console port](https://github.com/kanzya/photo/raw/main/SEKAICTF/bakudan.png)
-何も変な部分はなかったはずなので、特に気を付けるのは集中力を切らさないことでしたね...\\
+何も変な部分はなかったはずなので、特に気を付けるのは集中力を切らさないことでしたね...
 
 flag : *SEKAI{SenkouToTomoniHibikuBakuon!}*
 
@@ -90,7 +90,7 @@ flagのmp3とそれを作ったであろうpythonファイルが渡されます�
 ```
 
 これ曲名が重なってるところは歌っている人のバージョンが違うみたいでしたね...これ用意したのえぐない????\\
-作問者に頭が上がりません...\\
+作問者に頭が上がりません...
 
 flag :*SAKAI{v0CaloId<3u}*
 
