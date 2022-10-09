@@ -1,7 +1,7 @@
 ---
 title: GDG Algiers CTF writeup
 author: kanon
-date: 2022-10-10 2:59:00 +0800
+date: 2022-10-10 1:00:00 +0800
 categories: [ctf,writeup]
 tags: [ctf,cryptography,writeup]
 math: true
