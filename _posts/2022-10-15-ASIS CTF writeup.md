@@ -423,7 +423,7 @@ if __name__ == '__main__':
 
 ### solve
 
-なにも考えずに、条件で$x < p$ が通ることが確認できるので、 $p-1$投げておしまいです。
+なにも考えずに、条件で$x < p$ が通ることが確認できるので、 $1-p$投げておしまいです。
 
 ```python
 from pwn import *
@@ -540,7 +540,7 @@ def dec_para(PUB,ENC):
 
 #### part 2
 
-$enc = s^m * r^{2 ^ k} \pmod n$ より $r$ が邪魔なので$enc^{\frac{\phi(n)}{2^k}} = s^{\frac{m\phi(n)}{2^k}} * r^{\phi(n)} \pmod n = s^{\frac{m\phi(n)}{2^k}} \pmod n$ になり、dis_cretelogで求めてしまい
+$enc = s^m * r^{2 ^ k} \pmod n$ より $r$ が邪魔なので$enc^{\frac{\phi(n)}{2^k}} = s^{\frac{m\phi(n)}{2^k}} * r^{\phi(n)} \pmod n = s^{\frac{m\phi(n)}{2^k}} \pmod n$ になり、dis_cretelogで求めてしまい。今回は、念のため $p,q$分けて行った。
 
 ```python
 def decrypt(p,q,s,c):
