@@ -226,9 +226,9 @@ if xor_salts == 0:
     half1_salt = byte_xor(half1_salt, os.urandom(m))
 ```
 
-pad関数は$length = len(inp)$でランダム性が消去でき、xor_saltsは $half1\_salt \neq half2\_salt$にすればいい。
+pad関数は$length = len(inp)$でランダム性が消去でき、xor_saltsは $half1 \_ salt \neq half2_salt$にすればいい。
 
-あとはMITHみたく上から$out\_1 ,out\_2$が、下から$masked \_ flag$が求まるので順に逆算して以下のxorで答えを出せばいい
+あとはMITHみたく上から$out\_ 1 ,out\_ 2$が、下から$masked \_ flag$が求まるので順に逆算して以下のxorで答えを出せばいい
 
 ```python
 masked_flag = (flag_vector ^ out_1 ^ out_2) % 256
@@ -511,7 +511,7 @@ print(f'ENCS = {ENCS}')
 
 #### part 1
 
-手始めにgetRandomNBitIntegerの $k$ の値を知る必要があるが、単純に $p*q = (r_p*2^k+1)*(r_q*2^k+1) $ を考えれば、$ n$ の下位ビットを見て$0$ が続く長さを考えれば $k$ の値を決め打ちできる。今回は $134$ だった。
+手始めにgetRandomNBitIntegerの $k$ の値を知る必要があるが、単純に $p\*q = (r_p*2^k+1)\*(r_q\*2^k+1) $ を考えれば、$ n$ の下位ビットを見て$0$ が続く長さを考えれば $k$ の値を決め打ちできる。今回は $134$ だった。
 
 それにより $r_p,r_q$ の長さも見えてくる。$n$ が$512$ビットより$p,q$ のそれぞれの乱数部分の長さは $256-k$ ビットとなり。defundパイセンの[coppersmith](https://github.com/defund/coppersmith)で復元できる。
 
