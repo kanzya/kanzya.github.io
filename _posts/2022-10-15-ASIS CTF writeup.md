@@ -511,7 +511,7 @@ print(f'ENCS = {ENCS}')
 
 #### part 1
 
-手始めにgetRandomNBitIntegerの $k$ の値を知る必要があるが、単純に$p*q = (r_p*2^k+1)*(r_q*2^k+1)$ を考えれば、$ n$ の下位ビットを見て$0$ が続く長さを考えれば $k$ の値を決め打ちできる。今回は $134$ だった。
+手始めにgetRandomNBitIntegerの $k$ の値を知る必要があるが、単純に$p*q = (r_p*2^k+1)*(r_q*2^k+1) $ を考えれば、$ n$ の下位ビットを見て$0$ が続く長さを考えれば $k$ の値を決め打ちできる。今回は $134$ だった。
 
 それにより $r_p,r_q$ の長さも見えてくる。$n$ が$512$ビットより$p,q$ のそれぞれの乱数部分の長さは $256-k$ ビットとなり。defundパイセンの[coppersmith](https://github.com/defund/coppersmith)で復元できる。
 
