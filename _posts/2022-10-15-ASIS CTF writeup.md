@@ -226,9 +226,9 @@ if xor_salts == 0:
     half1_salt = byte_xor(half1_salt, os.urandom(m))
 ```
 
-pad関数は$length = len(inp)$でランダム性が消去でき、xor_saltsは $half1 \_ salt \neq half2_salt$にすればいい。
+pad関数は$length = len(inp)$でランダム性が消去でき、xor_saltsは $half1salt \neq half2salt$にすればいい。
 
-あとはMITHみたく上から$out\_ 1 ,out\_ 2$が、下から$masked \_ flag$が求まるので順に逆算して以下のxorで答えを出せばいい
+あとはMITHみたく上から$out1 ,out2$が、下から$maskedflag$が求まるので順に逆算して以下のxorで答えを出せばいい
 
 ```python
 masked_flag = (flag_vector ^ out_1 ^ out_2) % 256
