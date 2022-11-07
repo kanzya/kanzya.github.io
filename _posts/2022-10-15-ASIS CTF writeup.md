@@ -46,7 +46,6 @@ enc = encrypt(flag, n)
 print(f'pubkey = {n}')
 print(f'enc = {enc}')
 ```
-
 {: file="binned.py" }
 
 

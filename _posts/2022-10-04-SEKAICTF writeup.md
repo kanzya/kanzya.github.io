@@ -13,6 +13,8 @@ mermaid: true
 #   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
+**xsxsxsx**
+
 # はじめに
 SEKAICTFが10/1-10/3までの計48時間で開催されました。\\
 ボカロが好きなのもあって色々期待してましたが、UIしかり、問題しかり想像以上でした。\\
