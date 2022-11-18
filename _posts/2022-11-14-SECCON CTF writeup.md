@@ -248,7 +248,7 @@ if __name__ == "__main__":
 
 どうしたもんかなと思っていると、2次関数の性質として最大2個の解をもつことがあり、さらに言えば$b$で解を11にしているのでもう1つの解も11となることが言えます。これで2つのseedの値が得ることができたので、残りは以下の式 $\lim_{n \rightarrow\inf} e_{n+1} = e_n^2 + a*e_n +b$ なのでなんかこれ見たことあるなぁと思いまして。。。
 
-<img src="./2022-11-14-SECCON%20CTF%20writeup.assets/BBB.png" style="zoom:67%;" />
+![BBB](https://github.com/kanzya/photo/raw/main/SECCON/BBB.png)
 
 少し違いますがイメージとして適当な形で表すとこんな感じ...
 
