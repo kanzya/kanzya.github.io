@@ -707,7 +707,7 @@ while True:
         r = randint(1, n)
         r_ = r
         if blinded_query(r, c):
-            rs_and_Us.append([r, int(n).bit_length() - 10])
+            rs_and_Us.append([r, int(n).bit_length() - 2])
             print('got!', len(rs_and_Us))
 
     N = len(rs_and_Us)+1
