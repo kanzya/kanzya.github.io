@@ -1,5 +1,5 @@
 ---
-title: ASIS CTF writeup
+title: ASIS CTF 2022 writeup
 author: kanon
 date: 2022-10-15 14:59:00 +0800
 categories: [ctf,writeup]

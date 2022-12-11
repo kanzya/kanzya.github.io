@@ -1,5 +1,5 @@
 ---
-title: HITCON CTF writeup
+title: HITCON CTF 2022 writeup
 author: kanon
 date: 2022-11-30 12:00:00 +0900
 categories: [ctf,writeup]

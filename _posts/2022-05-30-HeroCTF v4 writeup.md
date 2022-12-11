@@ -1,5 +1,5 @@
 ---
-title: HeroCTF v4 writeup
+title: Hero CTF v4 2022 writeup
 author: kanon
 date: 2022-05-29 23:00:00 +0900
 # date: 2022-05-26 8:00:00 +0900

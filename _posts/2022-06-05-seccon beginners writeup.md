@@ -1,5 +1,5 @@
 ---
-title: seccon beginners writeup
+title: seccon beginners 2022 writeup
 author: kanon
 date: 2022-06-05 14:00:00 + 0000
 # date: 2022-05-26 8:00:00 +0900

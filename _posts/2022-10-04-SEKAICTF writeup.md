@@ -1,5 +1,5 @@
 ---
-title: SEKAICTF misc writeup
+title: SEKAI CTF 2022 misc writeup
 author: kanon
 date: 2022-10-04 00:00:00 +0800
 categories: [ctf,writeup]

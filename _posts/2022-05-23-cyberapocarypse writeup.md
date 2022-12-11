@@ -1,5 +1,5 @@
 ---
-title: cyberapocarypse writeup
+title: cyberapocarypse 2022 writeup
 author: kanon
 date: 2022-05-23 11:33:00 +0800
 categories: [ctf,writeup]

@@ -1,5 +1,5 @@
 ---
-title: shakti CTF writeup
+title: shakti CTF 2022 writeup
 author: kanon
 date: 2022-12-11 00:00:00 +0900
 categories: [ctf,writeup]

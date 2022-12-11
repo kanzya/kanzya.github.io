@@ -1,5 +1,5 @@
 ---
-title: SECCON CTF writeup
+title: SECCON CTF 2022 writeup
 author: kanon
 date: 2022-11-14 14:00:00 +0900
 categories: [ctf,writeup]

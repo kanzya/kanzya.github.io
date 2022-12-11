@@ -1,5 +1,5 @@
 ---
-title: GDG Algiers CTF writeup
+title: GDG Algiers CTF 2022 writeup
 author: kanon
 date: 2022-10-10 1:00:00 +0800
 categories: [ctf,writeup]
