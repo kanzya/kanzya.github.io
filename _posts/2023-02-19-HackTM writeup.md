@@ -554,3 +554,142 @@ ans = I.variety()
 print(ans)
 ```
 
+
+# 追記
+競技終了10分後に求まりました。泣きそうです。。。
+
+## 方針
+**案2で合っていてそれで終わります。GG**
+
+
+
+```python
+
+from pwn import *
+from server import decrypt, Privkey,Pubkey,Enc
+from random import randint
+from factordb.factordb import FactorDB
+import gmpy2
+from Crypto.Util.number import *
+
+poly_gcd = lambda g1, g2: g1.monic() if not g2 else poly_gcd(g2, g1%g2)
+
+def send_ans(r,s,t):
+    io.sendlineafter(b"r, s, t = ",(str(r)+","+str(s)+","+str(t)).encode())
+    if b"Something" in io.recvline():
+        return False
+    return [int(_) for _ in  io.recvline().decode().split("=")[1].split(",")]
+p = 0
+n = 0
+
+def find_n(io,p,n):
+    
+    cnt = 1
+    p,n =0,0
+    factors =set()
+    while True:    
+        ret = []
+        for _s in [-1,1]:
+            for _t in [0,1]:
+                tmp = send_ans(cnt,_s,_t)
+                if False == tmp:
+                    return False
+                ret.append(tmp[0])
+        
+        if len(set(ret)) ==2:
+            _ = abs(ret[0]-ret[1])
+            _ = factor(_,limit=10^8)[-1][0]
+            factors.add(_)
+        
+        if len(set(ret)) ==4:
+            _ = GCD(abs(ret[0]-ret[2]) ,abs(ret[3]-ret[1]))
+            _ = factor(_,limit=10^8)[-1][0]
+            factors.add(_)
+        
+        fac_list = list(factors)
+        fac_list.sort()
+        
+        for i in fac_list:
+            for k in fac_list:
+                if GCD(i,k) !=1:
+                    factors.add(GCD(i,k))
+        if len(factors) <3:
+            cnt +=1
+            continue
+        
+        if int(fac_list[0]).bit_length() < 1025 and int(fac_list[1]).bit_length() < 1025 and int(fac_list[0])!=1 and int(fac_list[1])!=1:
+            # print("ret=",int(fac_list[0]),int(fac_list[1]))
+            return int(fac_list[0]),int(fac_list[1])
+            return False
+        cnt +=1
+
+def find_c(io,p,q):
+    
+    p = int(str(p))
+    q = int(str(q))
+    retc = []
+    for t_prime in [q,p]:
+        for i in range(3,100):
+            ret = []
+            for _t in [0,1]:
+                # for _s in [-1,1]:
+                ret.append(send_ans(i,1,_t)[0])
+            if len(set(ret)) !=2:
+                continue
+            # print(ret,i)
+            if GCD(ret[0] - ret[1],t_prime) !=1:
+                continue
+            PR.<C,C_prime> = PolynomialRing(GF(t_prime))
+            polys = [
+                C_prime^2 +  (i^2 - 2*C_prime)*C + C^2 - C_prime* ret[0] * ret[1],
+                i * (C + C_prime) - C_prime * (ret[0] + ret[1]),
+            ]
+            I = Ideal(polys)
+            ans = I.variety()[1]
+            print(t_prime,ans)
+            retc.append([t_prime,ans[C]])
+            break
+
+    return retc
+    
+
+while True:
+        
+    io = remote("34.141.16.87", 50001)
+    # io = process(["python3","server.py"])
+    io.recvline()
+    # rst
+    exec(io.recvline(None).decode())
+    exec(io.recvline(None).decode())
+    exec(io.recvline(None).decode())
+
+    print(r,s,t)
+    tmp = find_n(io,p,n)
+    
+    if False == tmp:
+        io.close()
+        continue
+    q,p = tmp
+    n = p*q
+    if p>q:
+        p,q = q,p
+    print(p,q)
+    print("findc")
+    cs = find_c(io,p,q)
+    C = int(CRT([int(cs[0][1]),int(cs[1][1])],[int(cs[0][0]),int(cs[1][0])]))
+    print("C",C)
+    p = int(p)
+    q = int(q)
+    r = int(r)
+    s = int(s)
+    t = int(t)
+    for c in cs:
+        m = decrypt(Enc(r,s,t),Pubkey(n = p*q,c = C),Privkey(p=p,q=q))
+        print(decrypt(Enc(r,s,t),Pubkey(n = p*q,c = C),Privkey(p=p,q=q)))
+        print(long_to_bytes(int(m)))
+        exit()
+
+# b'HackTM{h4v3_y0u_r34lly_f0und_4ll_7h3_bu65...?}\x8d\xc3\xd5~vH\x918\xd1\t\x92 \x13v\xd9\xee\x8aS>B\xd3\xdbl\xe5\x88\xcfE\xfc\xa1\x18o@=\x8b\xfdI\x987]\xdc1\xa2"|\xc6\x0fO\xc6\x9c\xa8\xf9\xd3\xa3\x01\xdb\x04\t(+\xe9\xd7(s\xbb\xaa\xb7\xe2\xba\xd9\xf4\xfd\xde\xef\x0f\x84\x85.\xc01\x97\x13rJ\xa0\xba\xa7\x93&\x10\xb8\xde\x08\x1a\x1f\xb3I\x8e\x82\r\xb2\xda]\x1b;p\x16\xc7>\x86\xb3\x81\xd2\xf8\x04\xff\x15S\xf2\xbe\xcd\x98\xaaW\xfd\xe8\x88\xd9h\x11\x99\x1bo\xcaB\x95\x95\xccA\xefmx\x9c\xcf\xe3f\xd2\xd9\xf9\xe71\xefZ-d\x8e\x84\xbf,\xd6\x06S\x0b\xafiyWX\x8f\x91,":\xc5\xae\xea\x8f\xd1\x0b\x93\x13\x02\xe7>\xb2\x16\xf0\x80\xe4\xb5j\n\xd3S_C\xd7C\x8c#\xde\xd1W\x8b\xfet\n\xaf\rf
+```
+
+
