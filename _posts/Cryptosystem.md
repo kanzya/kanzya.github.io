@@ -18,7 +18,6 @@ mermaid: true
 ## Cryptosystem(KEM)
 
 
-
 ### RSA暗号
 
 encryptとdecryptは省略
