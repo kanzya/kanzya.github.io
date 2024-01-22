@@ -46,8 +46,10 @@ init() {
 }
 
 move_img(){
-  rm $SITE_DIR/../assets/img/ctf/img
-  cp $SITE_DIR/../_posts/img $SITE_DIR/../assets/img/ctf/img
+  rm -r ./assets/img/ctf/imgs
+  echo `pwd`
+  cp -r ./_posts/imgs ./assets/img/ctf/imgs
+  # cp $SITE_DIR/../_posts/img $SITE_DIR/../assets/img/ctf/img
 }
 
 build() {
