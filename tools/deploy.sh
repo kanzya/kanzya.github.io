@@ -45,13 +45,6 @@ init() {
   _baseurl="$(grep '^baseurl:' _config.yml | sed "s/.*: *//;s/['\"]//g;s/#.*//")"
 }
 
-move_img(){
-  rm -r ./assets/img/ctf/imgs
-  echo `pwd`
-  cp -r ./_posts/imgs ./assets/img/ctf/imgs
-  # cp $SITE_DIR/../_posts/img $SITE_DIR/../assets/img/ctf/img
-}
-
 build() {
   # clean up
   if [[ -d $SITE_DIR ]]; then
@@ -125,12 +118,9 @@ deploy() {
 
 main() {
   init
-  move_img  
   build
   test
   resume_site_dir
-
-  # echo `pwd`
 
   if $_opt_dry_run; then
     exit 0
