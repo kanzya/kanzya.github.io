@@ -121,8 +121,7 @@ main() {
   build
   test
   resume_site_dir
-  cp  "$SITE_DIR"/../_posts/assets "$SITE_DIR"/posts
-  echo _posts/assets "$SITE_DIR"/posts
+  cp -r "$SITE_DIR"/../_posts/assets "$SITE_DIR"/posts
   # echo `pwd`
 
   if $_opt_dry_run; then
