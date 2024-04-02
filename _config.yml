@@ -82,7 +82,8 @@ theme_mode:   dark
 # e.g. 'https://cdn.com'
 
 # img_cdn: 'https://raw.githubusercontent.com/kanzya/photo/main/image.jpg'
-img_cdn: 'https://raw.githubusercontent.com/kanzya/kanzya.github.io/main/_posts/'
+# img_cdn: 'https://raw.githubusercontent.com/kanzya/kanzya.github.io/main/_posts/'
+img_cdn: 'https://blog.lkan.onl/'
 
 # the avatar on sidebar, support local or CORS resources
 avatar: 'https://raw.githubusercontent.com/kanzya/photo/main/image.jpg'
